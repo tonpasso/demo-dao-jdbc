@@ -119,7 +119,7 @@ public class SellerDaoJDBC implements SellerDao {
 			st = conexao.prepareStatement(
 					"SELECT seller.*, department.NAME as DepName "
 					+ "FROM seller INNER JOIN department "
-					+ "ON seller.DepartmentId = departmentId "
+					+ "ON seller.DepartmentId = department.Id "
 					+ "WHERE DepartmentId = ? "
 					+ "ORDER by Name"
 					);
